@@ -1,10 +1,15 @@
 #!/bin/sh
 
+OPTIONS=""
+
+
+
 #
 # starts from here
 #
 
 GROUP_NAME="$1"
+REGION="$2"
 
 if [ "${GROUP_NAME}" = "" ]
 then
@@ -15,8 +20,14 @@ then
     exit 1
 fi
 
+if [ "${REGION}" != "" ]
+then
+    OPTIONS="${OPTIONS} --region ${REGION}"
+fi
+
 aws iam create-group \
-    --group-name ${GROUP_NAME}
+    --group-name ${GROUP_NAME} \
+    ${OPTIONS}
 STATUS=$?
 
 exit ${STATUS}

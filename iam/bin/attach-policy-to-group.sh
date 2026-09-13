@@ -27,7 +27,7 @@ then
 fi
 
 aws iam attach-group-policy \
-  --group-name ${POLICY_NAME} \
+  --group-name ${GROUP_NAME} \
   --policy-arn ${POLICY_ARN}
 STATUS=$?
 
