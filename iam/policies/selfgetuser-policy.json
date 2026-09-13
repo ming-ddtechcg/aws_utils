@@ -1,0 +1,11 @@
+{
+  "Version": "2012-10-17",
+  "Statement": [
+    {
+      "Sid": "SelfGetUser",
+      "Effect": "Allow",
+      "Action": "iam:GetUser",
+      "Resource": "arn:aws:iam::186579592072:user/${aws:username}"
+    }
+  ]
+}
