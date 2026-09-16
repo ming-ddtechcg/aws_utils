@@ -52,7 +52,7 @@ fi
 
 if [ "${DESCRIPTION}" != "" ]
 then
-    OPTIONS="${OPTIONS} --description ${DESCRIPTION}"
+    OPTIONS="${OPTIONS} --description \"${DESCRIPTION}\""
 fi
 
 aws ec2 copy-image \
